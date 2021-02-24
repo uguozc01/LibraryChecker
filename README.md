@@ -1,5 +1,5 @@
 # LibraryChecker
-check which Github libraries a github user has used for a spesific programming language
+check which libraries a github user has used for a spesific programming language in their projects
 
 GENERAL
 
