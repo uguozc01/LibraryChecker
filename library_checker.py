@@ -6,7 +6,7 @@ import re
 def main():
 
     user = input('Please enter your github username:\n')
-    language = str(input('Please enter programming language extension:\n'))
+    language = str(input('Please enter programming language extension, e.g. "py" :\n'))
     repo1 = Repos(user,language)
     result = repo1.repo_links()
     pattern1 = re.compile(r'(import)\s(\w+)')
