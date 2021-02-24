@@ -26,7 +26,7 @@ def main():
                 m2 = re.match(pattern2, td.text)
                 if m2.group(2) not in library and not any( re.search( m2.group(2), item) for item in result ):
                     library.append(m2.group(2))
-            elif re.search('from', td.text) and re.search('import', td.text):
+            elif td.text.startswith('from') and re.search('from', td.text) and re.search('import', td.text):
                 if re.split(r'[.\s]', td.text)[1] not in library:
                     library.append(re.split(r'[.\s]', td.text)[1] )
     print(library)
