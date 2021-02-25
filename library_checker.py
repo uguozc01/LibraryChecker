@@ -29,6 +29,6 @@ def main():
             elif td.text.startswith('from') and re.search('from', td.text) and re.search('import', td.text):
                 if re.split(r'[.\s]', td.text)[1] not in library:
                     library.append(re.split(r'[.\s]', td.text)[1] )
-    print(library)
+    print(f'\nuser "{user}" have used the following libraries in their projects:\n{library}')
 
 main()
